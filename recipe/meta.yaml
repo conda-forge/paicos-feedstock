@@ -13,11 +13,12 @@ build:
   skip: True  # [py<38]
   skip: True  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
     - cross-python_{{ target_platform }}    # [build_platform != target_platform]
