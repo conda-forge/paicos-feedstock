@@ -1,5 +1,5 @@
 {% set name = "paicos" %}
-{% set version = "0.1.14" %}
+{% set version = "0.1.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paicos-{{ version }}.tar.gz
-  sha256: c8a5456420af71d452124ac163dc1456f6dbd930c9a9cad1c531cb4aad7d2b57
+  sha256: 571186d75c84aae795e1a6aeb732d90c53966216d596d8c0619ff0d72e906783
 
 build:
   skip: true  # [py<38]
