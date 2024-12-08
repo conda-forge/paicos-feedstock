@@ -13,7 +13,7 @@ build:
   skip: true  # [py<38]
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -41,7 +41,7 @@ requirements:
     - scipy
     - {{ pin_compatible("numpy") }}
     - h5py
-    - astropy
+    - astropy-base
     - numba
     - matplotlib-base
 
