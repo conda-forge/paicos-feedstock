@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paicos-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paicos-{{ version }}.tar.gz
   sha256: 571186d75c84aae795e1a6aeb732d90c53966216d596d8c0619ff0d72e906783
 
 build:
   skip: true  # [py<38]
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
