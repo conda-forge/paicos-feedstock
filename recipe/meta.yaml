@@ -1,5 +1,5 @@
 {% set name = "paicos" %}
-{% set version = "0.1.16" %}
+{% set version = "0.1.17" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paicos-{{ version }}.tar.gz
-  sha256: 1cee7200908abdb04c885d94a3e49a8dd2bf25add0a8d51be22edd513e3dc9a0
+  sha256: 10b016d61a098fd126ce97b75310365d3cd5ed1a780bed175769765687384cae
 
 build:
   skip: true  # [py<38]
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
